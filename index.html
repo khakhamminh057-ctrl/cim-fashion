@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CIM FASHION</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="topbar">FREESHIP ĐƠN TỪ 499.000Đ • ĐỔI TRẢ TRONG 7 NGÀY</div>
+<header>
+  <div class="head">
+    <a class="logo" href="index.html">CIM<span>FASHION</span></a>
+    <div class="search"><input id="search" placeholder="Tìm kiếm sản phẩm..."><button onclick="searchProducts()">⌕</button></div>
+    <button class="cart-mini" onclick="location.href='cart.html'">🛒 <b id="cartCount">0</b></button>
+  </div>
+  <nav><a href="index.html">Trang chủ</a><a href="#products">Sản phẩm</a><a href="#products" onclick="filter('Nam')">Áo/Quần Nam</a><a href="#products" onclick="filter('Nữ')">Thời trang Nữ</a><a href="#products" onclick="filter('Unisex')">Hoodie</a><a href="#policies">Chính sách</a><a href="#contact">Liên hệ</a></nav>
+</header>
+<section class="hero"><div><small>BỘ SƯU TẬP 2026</small><h1>THỜI TRANG<br>THEO CÁCH CỦA BẠN</h1><p>Đơn giản • Hiện đại • Dễ phối</p><button onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">KHÁM PHÁ NGAY</button></div></section>
+<section class="section">
+<h2>DANH MỤC</h2><div class="cats"><button onclick="filter('Nam')">👔<b> NAM</b></button><button onclick="filter('Nữ')">👗<b> NỮ</b></button><button onclick="filter('Unisex')">🧥<b> UNISEX</b></button><button onclick="filter('all')">✨<b> TẤT CẢ</b></button></div>
+</section>
+<section class="section" id="products"><div class="section-title"><h2>SẢN PHẨM</h2><select id="sort" onchange="renderProducts()"><option value="default">Mới nhất</option><option value="low">Giá thấp → cao</option><option value="high">Giá cao → thấp</option></select></div><div id="productGrid" class="grid"></div></section>
+<section class="promo"><h2>GIẢM ĐẾN 30%</h2><p>Ưu đãi giới hạn cho các sản phẩm được chọn.</p><button onclick="filter('sale')">XEM KHUYẾN MÃI</button></section>
+<section class="section" id="policies"><h2>CHÍNH SÁCH</h2><div class="info-grid"><article><b>🔄 Đổi trả</b><p>Đổi sản phẩm trong 7 ngày theo điều kiện của shop.</p></article><article><b>🚚 Giao hàng</b><p>Giao toàn quốc, phí ship hiển thị khi thanh toán.</p></article><article><b>💳 Thanh toán</b><p>COD hoặc chuyển khoản.</p></article><article><b>🔒 Bảo mật</b><p>Thông tin khách hàng chỉ dùng để xử lý đơn.</p></article></div></section>
+<footer id="contact"><div><h2>CIM FASHION</h2><p>📍 Hà Nội, Việt Nam</p><p>☎ 0988 123 456</p><p>✉ cimfashion@gmail.com</p></div><div><h3>MẠNG XÃ HỘI</h3><p>Facebook • TikTok • Instagram</p><p>08:00 – 22:00 mỗi ngày</p></div></footer>
+<script src="products.js"></script><script src="app.js"></script>
+</body></html>
